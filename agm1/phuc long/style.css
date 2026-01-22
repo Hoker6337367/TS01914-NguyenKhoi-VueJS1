@@ -1,0 +1,259 @@
+
+.tieude{
+    color: rgb(0, 111, 60);
+    text-align: center ;
+    margin: 20px 30px;
+}
+.hinhanh{
+    display: flex;
+    background-color: rgb(236, 239, 241);
+    height:150px;
+    width: 217px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.hinhanh img{
+    
+}
+
+.noidung{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.sanpham0 .tensp{
+    color: rgb(0, 111, 60);
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+.sanpham0 .giasp{
+    color: rgb(0, 111, 60);
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.giasp u{
+    font-weight: none;
+    text-decoration: underline;
+    font-size: 11px;
+}
+.button-mua{
+    padding: 10px 40px;
+    background-color: rgb(0, 111, 60);
+    display: flex;
+    color: white;
+    margin: 10px 10px;
+    border-radius: 3px;
+    justify-content: center;
+    
+}
+.button-mua i{
+    margin-right: 4px;
+}
+
+.sanpham0{
+    
+    border: solid 1px rgb(236, 239, 241);
+    margin: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.sanpham0:hover{
+    box-shadow: 0px 1px 10px -1px rgb(0, 0, 0, 0.3);
+}
+.noidung{
+    
+    margin-top: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
+    
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.xemthem a{
+    color: rgb(12, 113, 61);
+}
+.xemthem{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    height: 100px;
+    
+    
+    
+}
+
+
+
+.cha{
+    position: fixed; /* Đổi từ sticky sang fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white; /* Thêm màu nền để không bị trong suốt */
+    z-index: 1000;
+    
+}
+body{
+    margin-top: 150px;
+}
+.menu-1{
+    
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+}
+.menu-1 img{
+    padding-right: 20px;
+}
+.menu-1 input{
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 60px;
+    border: none;
+    background-color: rgb(236, 239, 241);
+    
+}
+.menu-2{
+    padding: 10px;
+    width:400px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 40%;
+    
+}
+.menu-2 .pt-nhan-hang{
+    background-color: rgb(236, 239, 241);
+    padding: 10px 20px;
+    border-radius: 20px;
+    height: 40px;
+    width: 280px;
+    line-height: 50%;
+    
+    
+}
+.menu-2 .pt-nhan-hang a{
+    text-decoration: none;
+    height: 200px;
+    color: rgb(5, 57, 5);
+    line-height:25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.menu i{
+        font-size: 30px;
+        color: rgb(0, 89, 0);
+        padding-left: 20px;
+    
+}
+.menu2{
+    display: flex;
+    justify-content: center;
+    
+    height: 40px;
+    align-items: center;
+    box-shadow: -1px 3px 10px -2px rgb(0, 0, 0, 0.3);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.Menu .d1{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+
+
+
+
+
+
+
+
+
+.ketbai .d1{
+            
+    width: 400px;
+    line-height: 22PX;
+    margin: 10px 20px;
+}
+.ketbai .khuyenmai1{
+    padding-top: 100px;
+}
+.ketbai .d2{
+    height: 370px;
+    width: 240px;
+    margin: 10px 20px;
+    width: 190px;
+    
+}
+
+.ketbai .d2 a{
+    text-decoration: none;
+    color: aliceblue;
+    line-height: 22px;
+    
+}
+
+.ketbai .d4{
+    height: 370px;
+    width: 240px;
+    background-color: aqua;
+    margin: 10px 20px;
+}
+.ketbai .d5{
+    height: 370px;
+    width: 240px;
+    background-color: aqua;
+    margin: 10px 20px;
+}
+.ketbai p{
+    color: aliceblue;
+}
+
+.ketbai{
+    background-color: rgb(0, 111, 60);
+    height: 440px;
+    padding: 24px 15px;
+    display: flex;
+    justify-content: center;
+}
+.menu2 a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+.menu2 a:hover{
+    color: rgb(12, 113, 61);
+}
+
+
+
+

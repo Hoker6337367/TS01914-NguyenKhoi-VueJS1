@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Xuất Nguyên Liệu Kiểu Shopee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cha">
+  <h2> Danh Sách Món Ăn </h2>
+
+  <div class="menu-container">
+    <div class="dish-card">
+      <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Mì Idomi">
+      <div class="dish-info">
+        <h3>Mì Idomi</h3>
+        <div class="quantity-control">
+          <button onclick="decrease('miIdomi')">−</button>
+          <input id="miIdomi" type="number" value="0" min="0">
+          <button onclick="increase('miIdomi')">+</button>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+  </div>
+
+  <button class="export-btn" onclick="getIngredients()">🧾 Xuất Nguyên Liệu</button>
+
+  <div class="result">
+    <h3>Nguyên liệu cần:</h3>
+    <ul id="ingredientsList"></ul>
+  </div>
+    </div>
+  
+  
+
+  <script>
+    const recipes = {
+      "mì idomi": [
+        { name: "Mì gói", quantity: 2 },
+        { name: "Trứng", quantity: 1 }
+      ],
+      "cơm chiên": [
+        { name: "Cơm", quantity: 1 },
+        { name: "Trứng", quantity: 2 },
+        { name: "Dầu ăn", quantity: 1 }
+      ],
+      "phở bò": [
+        { name: "Bánh phở", quantity: 1 },
+        { name: "Thịt bò", quantity: 200 },
+        { name: "Hành", quantity: 1 }
+      ]
+    };
+
+    function increase(id) {
+      const input = document.getElementById(id);
+      input.value = parseInt(input.value || 0) + 1;
+    }
+
+    function decrease(id) {
+      const input = document.getElementById(id);
+      if (parseInt(input.value) > 0) {
+        input.value = parseInt(input.value) - 1;
+      }
+    }
+
+    function getIngredients() {
+      const orders = {
+        "mì idomi": parseInt(document.getElementById("miIdomi").value) || 0,
+        "cơm chiên": parseInt(document.getElementById("comChien").value) || 0,
+        "phở bò": parseInt(document.getElementById("phoBo").value) || 0
+      };
+
+      const totalIngredients = {};
+
+      for (let dish in orders) {
+        const count = orders[dish];
+        if (count > 0 && recipes[dish]) {
+          recipes[dish].forEach(item => {
+            if (!totalIngredients[item.name]) totalIngredients[item.name] = 0;
+            totalIngredients[item.name] += item.quantity * count;
+          });
+        }
+      }
+
+      const list = document.getElementById("ingredientsList");
+      list.innerHTML = "";
+      if (Object.keys(totalIngredients).length === 0) {
+        list.innerHTML = "<li>Chưa chọn món nào!</li>";
+        return;
+      }
+
+      for (let name in totalIngredients) {
+        const li = document.createElement("li");
+        li.textContent = `${name}: ${totalIngredients[name]}`;
+        list.appendChild(li);
+      }
+    }
+  </script>
+</body>
+</html>

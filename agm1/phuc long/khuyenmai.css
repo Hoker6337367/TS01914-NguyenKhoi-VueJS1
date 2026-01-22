@@ -1,0 +1,49 @@
+.khuyenmai{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    
+    
+    flex-wrap: wrap;
+}
+.luotxem p{
+    text-align: end;
+    border: none;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0, .6);
+}
+.luotxem p img{
+    padding-right: 10px;
+    transform: translateY(3px);
+}
+.km1{
+    border: solid 1px rgb(0, 0, 0, .2);
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 297.65px;
+}
+.km1 img{
+    border-radius: 5px;
+}
+.km1:hover > .thongtin a{
+    
+    color: rgb(0, 111, 60);
+}
+.km1:hover{
+    box-shadow: 0px 0px 5px 3px rgba(103, 103, 103, 0.3);
+}
+.thongtin {
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 21px;
+    text-decoration: none;
+    color: black;
+}
+.thongtin a{
+    text-decoration: none;
+    color: black;
+}

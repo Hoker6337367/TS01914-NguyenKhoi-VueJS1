@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đếm nguyên liệu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="thanhtacvu">
+    <a href="index.html">Trang chủ</a>
+    <a href="demtien.html">Đếm tiền</a>
+    <a href="xuatnguyenlieu.html">Xuất nguyên liệu</a>
+  </div>
+
+  <div id="chonMon" class="phanthan">
+    <div class="dish-card">
+      <img src="https://images.unsplash.com/photo-1604908177345-218207d6b4a5" alt="Mì Idomi">
+      <div class="dish-info">
+        <h3>Mì Idomi</h3>
+        <div class="quantity-control">
+          <button onclick="decrease('miIdomi')">−</button>
+          <input id="miIdomi" type="text" value="0" min="0">
+          <button onclick="increase('miIdomi')">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card">
+  <img src="" alt="Mì trứng">
+  <div class="dish-info">
+    <h3>Mì Trứng (Xào)</h3>
+    <div class="quantity-control">
+      <button onclick="decrease('mitrung_xao')">−</button>
+      <input id="mitrung_xao" type="text" value="0" min="0">
+      <button onclick="increase('mitrung_xao')">+</button>
+    </div>
+  </div>
+</div>
+
+
+    <div class="dish-card">
+      <img src="" alt="Mì Trứng Nước">
+      <div class="dish-info">
+        <h3>Mì Trứng (Nước)</h3>
+        <div class="quantity-control">
+          <button onclick="decrease('mitrung_nuoc')">−</button>
+          <input id="mitrung_nuoc" type="text" value="0" min="0">
+          <button onclick="increase('mitrung_nuoc')">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="dish-card">
+  <img src="https://images.unsplash.com/photo-1625937324849-2f2a4c9adacd" alt="Mì Trứng Xúc Xích (Xào)">
+  <div class="dish-info">
+    <h3>Mì Trứng Xúc Xích (Xào)</h3>
+    <div class="quantity-control">
+      <button onclick="decrease('mitrung_xucxich')">−</button>
+      <input id="mitrung_xucxich" type="text" value="0" min="0">
+      <button onclick="increase('mitrung_xucxich')">+</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="phan-cuoi">
+    <button class="btn-orange" onclick="xuatNguyenLieu()">Submit</button>
+  </div>
+
+  <div id="nguyenLieuPage" class="nguyenlieu-page">
+    <h2 style="text-align:center;">Nguyên liệu cần chuẩn bị</h2>
+    <table id="bangNguyenLieu">
+      <tr><th>Món ăn</th><th>Nguyên liệu</th><th>Số lượng</th></tr>
+    </table>
+    <div style="text-align:center;margin-top:20px;">
+      <button class="btn-orange" onclick="quayLai()">← Quay lại</button>
+    </div>
+  </div>
+
+<script>
+function increase(id) {
+  const input = document.getElementById(id);
+  input.value = parseInt(input.value) + 1;
+}
+function decrease(id) {
+  const input = document.getElementById(id);
+  if (input.value > 0) input.value = parseInt(input.value) - 1;
+}
+
+// 🔹 Công thức từng món
+const recipes = {
+  miIdomi: {
+    name: "Mì Idomi",
+    ingredients: { "Mì Idomi": 2, "Trứng": 1 }
+  },
+
+  mitrung_xao: {
+    name: "Mì Trứng",
+    ingredients: { "Mì Trứng": 1.5, "Trứng": 1 }
+  },
+
+mitrung_xucxich: {
+  name: "Mì Trứng Xúc Xích (Xào)",
+  ingredients: { "Mì Trứng": 1.5, "Trứng": 1, "Xúc Xích": 1 }
+},
+
+  
+  Mitrung_bo_xao: {
+    name: "Mì Trứng Bò xào",
+    ingredents: {"Mì Trứng:":1.5, "Trứng": 1, "Xúc Xích": 1 }
+  },
+
+
+
+  mitrung_nuoc: {
+    name: "Mì Trứng",
+    ingredients: { "Mì hảo hảo": 1, "Trứng": 1 }
+  },
+
+  miSiucay_bo: {
+    name: "Mì Siu Cay Bò",
+    ingredients: { "Mì Siu Cay": 1, "Bò": 1 }
+  },
+
+  misiucay_haisan:{
+    name: "Mì Siêu Cay Hải Sản",
+    ingredents: {"Mì Siu Cay": 1, "Hải Sản": 1}
+  },
+  
+
+
+
+  com_baroi: {
+    name: "Cơm Ba Rọi",
+    ingredients: { "Cơm": 1, "Thịt Ba Rọi": 1 }
+  },
+
+  com_bo: {
+    name: "cơm bò xào",
+    ingredents: {"Cơm": 1, "Thịt Bò": 1}
+  },
+
+  com_gavien: {
+    name: "Cơm gà viên",
+    ingredients: { "Cơm": 1, "gà viên": 1 }
+  },
+
+  com_duiga: {
+    name: "Cơm đùi gà",
+    ingredents: {"Cơm": 1, "Đùi Gà" : 1}
+  },
+
+
+
+  ga_vien: {
+    name: "gà viên lắc phô mai",
+    ingredents: {"gà viên": 1.5}
+  },
+
+  khoaitay_lacphomai: {
+    name: "khoai tây lắc phô mai",
+    ingredents: {"khoai tây": 1}
+  },
+
+  Ca_vien: {
+    name: "1 set Cá Viên",
+    ingredents: {"Cá Viên": 1.5},
+  },
+
+  Bo_vien: {
+    name: "1 set bò viên",
+    ingredents: {"Bò Viên": 1.5},
+  },
+
+  set_vien_chien: {
+    name: "1 set viên chiên" ,
+    ingredents: {"Bò Viên": 1, "Cá Viên": 1, "Xúc Xích": 1},
+  },
+
+  Xuc_Xich_1cay: {
+    name: "1 cây xúc xích chiên",
+    ingredents: {"Xúc Xích": 1}
+  },
+
+  Bo_them: {
+    name: "bò thêm ",
+    ingredents: {"Thịt Bò": 1}
+  },
+
+  Trung_them: {
+    name: "Trứng thêm",
+    ingredients:{"Trứng": 1}
+  },
+
+  Pho_them: {
+    name: "Phở Thêm",
+    ingredents:{"phở": 1}
+  }
+
+
+};
+
+// 🔹 Hàm xuất nguyên liệu
+function xuatNguyenLieu() {
+  const tongDung = {}; // Tổng nguyên liệu đã gộp
+
+  for (const key in recipes) {
+    const input = document.getElementById(key);
+    if (!input) continue;
+    const slMon = parseFloat(input.value);
+    if (slMon > 0) {
+      const mon = recipes[key];
+      for (const ngl in mon.ingredients) {
+        const slDung = mon.ingredients[ngl] * slMon;
+        tongDung[ngl] = (tongDung[ngl] || 0) + slDung;
+      }
+    }
+  }
+
+  // Hiển thị bảng nguyên liệu
+  const table = document.getElementById("bangNguyenLieu");
+  table.innerHTML = `<tr><th>Nguyên liệu</th><th>Số lượng cần dùng</th></tr>`;
+
+  if (Object.keys(tongDung).length === 0) {
+    table.innerHTML += `<tr><td colspan="2">Chưa chọn món nào</td></tr>`;
+  } else {
+    for (const ngl in tongDung) {
+      const row = `<tr>
+        <td>${ngl}</td>
+        <td>${tongDung[ngl]}</td>
+      </tr>`;
+      table.innerHTML += row;
+    }
+  }
+
+  // Chuyển trang
+  document.getElementById("chonMon").style.display = "none";
+  document.querySelector(".phan-cuoi").style.display = "none";
+  document.getElementById("nguyenLieuPage").style.display = "block";
+}
+
+// 🔹 Quay lại chọn món
+function quayLai() {
+  document.getElementById("chonMon").style.display = "flex";
+  document.querySelector(".phan-cuoi").style.display = "block";
+  document.getElementById("nguyenLieuPage").style.display = "none";
+}
+</script>
+
+</body>
+</html>

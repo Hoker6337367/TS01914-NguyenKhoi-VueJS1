@@ -1,0 +1,123 @@
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #e74c3c;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 50px;
+    }
+
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .dish-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .dish-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .dish-info {
+      padding: 12px;
+      text-align: center;
+    }
+
+    .dish-info h3 {
+      margin: 8px 0;
+      font-size: 18px;
+      color: #2c3e50;
+    }
+
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+      margin-top: 8px;
+    }
+
+    .quantity-control button {
+      background: #f0f0f0;
+      border: none;
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+      transition: 0.2s;
+    }
+
+    .quantity-control button:hover {
+      background: #ddd;
+    }
+
+    .quantity-control input {
+      width: 50px;
+      text-align: center;
+      border: none;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .export-btn {
+      display: block;
+      margin: 25px auto;
+      background: #e67e22;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .export-btn:hover {
+      background: #d35400;
+    }
+
+    .result {
+      max-width: 500px;
+      margin: 20px auto;
+      background: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .result li {
+      background: #f9f9f9;
+      margin-bottom: 6px;
+      padding: 8px 10px;
+      border-radius: 5px;
+    }
+    .cha {
+        background-color: #216425;
+        
+        padding: 40px;
+    }

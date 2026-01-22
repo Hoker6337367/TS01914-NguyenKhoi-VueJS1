@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đếm tiền</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .thanhtacvu {
+      height: 60px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      background-color: black;
+      padding-left: 20px;
+    }
+
+    .thanhtacvu a {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      padding: 20px 25px;
+      text-transform: uppercase;
+      font-size: 13px;
+      transition: color 0.3s ease;
+    }
+
+    .thanhtacvu a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      width: 0;
+      height: 3px;
+      background-color: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .thanhtacvu a:hover::after,
+    .thanhtacvu a:focus::after {
+      width: 100%;
+    }
+
+    .phanthan {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 91vh;
+      background-image: url(phanmemdemnguyenlieu/pngtree-lofi-backdrop-featuring-a-calm-lake-lush-green-forests-and-snowy-image_16409850.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    .box {
+      background: transparent;
+      backdrop-filter: blur(50px);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.4);
+      width: 500px;
+      text-align: center;
+    }
+
+    .box h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      color: rgba(0,0,0,0.6);
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 6px 0;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    input {
+      padding: 5px 10px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      width: 150px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      width: 100%;
+      margin-top: 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      font-size: 18px;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background-color: hsl(57, 100%, 53%);
+      color: black;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #2c2c2c;
+    }
+        @media (max-width: 1024px) {
+      .box {
+        width: 80%;
+        padding: 20px;
+      }
+
+      .box h1 {
+        font-size: 32px;
+      }
+
+      input {
+        width: 130px;
+        font-size: 16px;
+      }
+
+      label {
+        font-size: 17px;
+      }
+    }
+
+    /* ===== RESPONSIVE CHO ĐIỆN THOẠI ===== */
+    @media (max-width: 600px) {
+      .thanhtacvu {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+        justify-content: center;
+      }
+
+      .thanhtacvu a {
+        padding: 10px 15px;
+        font-size: 12px;
+      }
+
+      .phanthan {
+        height: auto;
+        padding: 40px 15px;
+      }
+
+      .box {
+        width: 100%;
+        padding: 15px;
+      }
+
+      .box h1 {
+        font-size: 26px;
+      }
+
+      .box p {
+        font-size: 14px;
+      }
+
+      label {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 16px;
+        
+      }
+
+      input {
+        width: 100%;
+        font-size: 16px;
+        margin-top: 5px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      #result {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thanhtacvu">
+    <a href="index.html">Trang chủ</a>
+    <a href="demtien.html">Đếm tiền</a>
+    <a href="xuatnguyenlieu.html">Xuất nguyên liệu</a>
+  </div>
+
+  <div class="phanthan">
+    <div class="box">
+      <h1>Đếm tiền</h1>
+      <p>Mời nhập số lượng từng mệnh giá để tính tổng</p>
+
+      <form id="moneyForm">
+        <label>500.000đ: <input type="number" id="v500" min="0" placeholder="0"></label>
+        <label>200.000đ: <input type="number" id="v200" min="0" placeholder="0"></label>
+        <label>100.000đ: <input type="number" id="v100" min="0" placeholder="0"></label>
+        <label>50.000đ: <input type="number" id="v50" min="0" placeholder="0"></label>
+        <label>20.000đ: <input type="number" id="v20" min="0" placeholder="0"></label>
+        <label>10.000đ: <input type="number" id="v10" min="0" placeholder="0"></label>
+        <label>5.000đ: <input type="number" id="v5" min="0" placeholder="0"></label>
+        <label>2.000đ: <input type="number" id="v2" min="0" placeholder="0"></label>
+        <label>1.000đ: <input type="number" id="v1" min="0" placeholder="0"></label>
+        <button type="button" onclick="countMoney()">Tính tổng</button>
+      </form>
+
+      <div id="result">Tổng: 0đ</div>
+    </div>
+  </div>
+
+  <script>
+    function countMoney() {
+      const values = {
+        v500: 500000,
+        v200: 200000,
+        v100: 100000,
+        v50: 50000,
+        v20: 20000,
+        v10: 10000,
+        v5: 5000,
+        v2: 2000,
+        v1: 1000
+      };
+
+      let total = 0;
+      for (let id in values) {
+        const quantity = parseInt(document.getElementById(id).value) || 0;
+        total += quantity * values[id];
+      }
+
+      document.getElementById("result").innerText = "Tổng: " + total.toLocaleString("vi-VN") + " đ";
+    }
+  </script>
+</body>
+</html>

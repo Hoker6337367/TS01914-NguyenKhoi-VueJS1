@@ -1,0 +1,166 @@
+.xemthem a{
+    color: rgb(12, 113, 61);
+}
+.xemthem{
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    cursor: pointer;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    height: 100px;
+    
+    
+    
+}
+
+
+
+.cha{
+    position: fixed; /* Đổi từ sticky sang fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white; /* Thêm màu nền để không bị trong suốt */
+    z-index: 1000;
+    
+}
+body{
+    margin-top: 150px;
+}
+.menu-1{
+    
+    padding: 10px;
+    display: flex;
+    cursor: pointer;
+}
+.menu-1 img{
+    padding-right: 20px;
+}
+.menu-1 input{
+    outline: none;
+    border-radius: 20px;
+    padding: 10px 60px;
+    border: none;
+    background-color: rgb(236, 239, 241);
+    
+}
+.menu-2{
+    padding: 10px;
+    width:400px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 40%;
+    
+}
+.menu-2 .pt-nhan-hang{
+    background-color: rgb(236, 239, 241);
+    padding: 10px 20px;
+    border-radius: 20px;
+    height: 40px;
+    width: 280px;
+    line-height: 50%;
+    
+    
+}
+.menu-2 .pt-nhan-hang a{
+    text-decoration: none;
+    height: 200px;
+    color: rgb(5, 57, 5);
+    line-height:25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.menu i{
+        font-size: 30px;
+        color: rgb(0, 89, 0);
+        padding-left: 20px;
+    
+}
+.menu2{
+    display: flex;
+    justify-content: center;
+    
+    height: 40px;
+    align-items: center;
+    box-shadow: -1px 3px 10px -2px rgb(0, 0, 0, 0.3);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.menu2 a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(119, 119, 119);
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+.menu2 a:hover{
+    color: rgb(12, 113, 61);
+}
+.slide-bar{
+    
+}
+.slider {
+            
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .slides {
+            display: flex;
+            position: relative;
+            width: 100%;
+        }
+
+        .slide {
+            width: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .active {
+            opacity: 1;
+        }
+
+        /* Nút điều hướng */
+        .slider button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .slider:hover button{
+            opacity: 1;
+        }
+        
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+.noidung a{
+    text-decoration: none;
+}
