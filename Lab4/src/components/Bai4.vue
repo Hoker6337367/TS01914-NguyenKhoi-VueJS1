@@ -27,10 +27,14 @@ const items = [
 
 <template>
   <div class="container mt-5">
-    <h2 class="text-center mb-4 fw-bold">
+    
+    <button class="btn btn-info mt-auto align-self">buton</button>
+       <h2 class="text-center mb-4 fw-bold">
       Kiến thức sức khỏe cộng đồng
     </h2>
-
+    <div>
+      
+    </div>
     <div class="row">
       <div
         class="col-md-4 mb-4"
@@ -48,7 +52,7 @@ const items = [
             <h5 class="card-title">{{ item.title }}</h5>
             <p class="card-text">{{ item.content }}</p>
 
-            <button class="btn btn-info mt-auto align-self-start">
+            <button class="btn btn-info mt-auto align-self-end">
               Xem chi tiết
             </button>
           </div>
@@ -56,6 +60,7 @@ const items = [
       </div>
     </div>
   </div>
+  
 </template>
 
 <style scoped>
@@ -72,4 +77,6 @@ const items = [
 .card {
   border-radius: 6px;
 }
+
+
 </style>

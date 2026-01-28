@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang chủ Blog (Bootstrap Only)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold text-success" href="#">BLOG</a>
+
+    <!-- <form class="d-flex mx-3" role="search">
+      <input class="form-control rounded-pill" type="search" placeholder="Tìm kiếm bài viết">
+    </form> -->
+
+    <div class="d-flex align-items-center gap-3 px-4 ">
+      <a href="crblog.html" class="btn btn-success rounded-pill px-4">Đăng bài</a>
+      <a href="profile.html"><i class="bi bi-person-circle fs-3 text-success"></i></a>
+    </div>
+  </div>
+</nav>
+
+<!-- MENU -->
+<div class="bg-white shadow-sm mt-5" >
+  <div class="container py-3">
+    <nav class="d-flex justify-content-center gap-4 text-uppercase fw-semibold ">
+      <a href="index.html" class="text-success text-decoration-none border-bottom border-2 border-success pb-1 px-1">
+        Trang chủ
+      </a>
+      <a href="Baiviet.html" class="text-secondary text-decoration-none px-1">
+        Bài viết
+      </a>
+      <a href="#" class="text-secondary text-decoration-none px-1">
+        Danh mục
+      </a>
+      <a href="Gioithieu.html" class="text-secondary text-decoration-none px-1">
+        Giới thiệu
+      </a>
+    </nav>
+  </div>
+</div>
+
+
+<!-- SLIDER (Bootstrap Carousel) -->
+<div class="container my-4">
+  <div id="blogCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner rounded shadow">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/1200/400?1" class="d-block w-100" alt="slide1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/1200/400?2" class="d-block w-100" alt="slide2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://picsum.photos/1200/400?3" class="d-block w-100" alt="slide3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#blogCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#blogCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<!-- CONTENT -->
+<div class="container my-4">
+  <div class="row g-4">
+
+    <!-- ===== BÀI VIẾT ===== -->
+    <div class="col-lg-8">
+
+      <!-- CARD 1 -->
+      <div class="card shadow-sm mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://picsum.photos/400/300?1"
+                 class="img-fluid h-100 rounded-start"
+                 alt="Vue.js">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <span class="badge bg-success mb-2">Vue.js</span>
+              <h5 class="card-title fw-bold">Vue.js là gì?</h5>
+              <p class="card-text text-muted">
+                Vue.js là framework JavaScript dùng để xây dựng giao diện người dùng hiện đại...
+              </p>
+              <button class="btn btn-outline-success rounded-pill px-4">
+                Xem thêm <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card shadow-sm mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://picsum.photos/400/300?2"
+                 class="img-fluid h-100 rounded-start">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <span class="badge bg-primary mb-2">Router</span>
+              <h5 class="card-title fw-bold">Hướng dẫn Vue Router</h5>
+              <p class="card-text text-muted">
+                Vue Router giúp xây dựng SPA với nhiều trang, quản lý điều hướng hiệu quả...
+              </p>
+              <button class="btn btn-outline-primary rounded-pill px-4">
+                Xem thêm <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card shadow-sm mb-4">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://picsum.photos/400/300?3"
+                 class="img-fluid h-100 rounded-start">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <span class="badge bg-secondary mb-2">Bootstrap</span>
+              <h5 class="card-title fw-bold">Bootstrap 5 có gì mới?</h5>
+              <p class="card-text text-muted">
+                Bootstrap 5 mang lại nhiều cải tiến về layout, utility và responsive...
+              </p>
+              <button class="btn btn-outline-secondary rounded-pill px-4">
+                Xem thêm <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== SIDEBAR ===== -->
+    <div class="col-lg-4">
+
+      <div class="card shadow-sm mb-4">
+        <div class="card-header fw-bold">
+          <i class="bi bi-folder me-1"></i> Danh mục
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item d-flex justify-content-between">
+            Frontend <span class="badge bg-success">12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            Backend <span class="badge bg-secondary">8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            Vue.js <span class="badge bg-success">5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            Bootstrap <span class="badge bg-primary">6</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card shadow-sm text-center">
+        <div class="card-body">
+          <h6 class="fw-bold">Theo dõi Blog</h6>
+          <button class="btn btn-success rounded-pill w-100 mt-2">
+            Follow
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <!-- BÌNH LUẬN -->
+<div class="card shadow-sm mt-4">
+  <div class="card-body p-4">
+
+    <h5 class="fw-bold mb-3">
+      <i class="bi bi-chat-dots text-success"></i> Bình luận
+    </h5>
+
+    <!-- FORM BÌNH LUẬN -->
+    <div class="mb-4">
+      <textarea class="form-control mb-2" rows="3"
+        placeholder="Viết bình luận của bạn..."></textarea>
+
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-success rounded-pill px-4">
+          <i class="bi bi-send"></i> Gửi
+        </button>
+      </div>
+    </div>
+
+    <!-- DANH SÁCH BÌNH LUẬN -->
+    <div class="d-flex gap-3 mb-3">
+      <i class="bi bi-person-circle fs-1 text-secondary"></i>
+      <div>
+        <div class="fw-semibold">Nguyễn Văn A</div>
+        <small class="text-muted">2 giờ trước</small>
+        <p class="mb-1 mt-1">
+          Bài viết rất hay, dễ hiểu cho người mới học Vue.js 
+        </p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="d-flex gap-3">
+      <i class="bi bi-person-circle fs-1 text-secondary"></i>
+      <div>
+        <div class="fw-semibold">Trần Thị B</div>
+        <small class="text-muted">1 ngày trước</small>
+        <p class="mb-1 mt-1">
+          Mong tác giả viết thêm về Vue Router 
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+
+
+<!-- FOOTER -->
+<footer class="bg-success text-white mt-5 py-4">
+  <div class="container text-center">
+    <p class="mb-1">© 2026 Blog Vue.js</p>
+    <small>Assignment Web – Vue.js & Bootstrap</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

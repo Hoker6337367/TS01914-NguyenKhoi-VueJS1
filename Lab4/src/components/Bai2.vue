@@ -15,3 +15,4 @@ const count = ref(0)
 <style scoped>
 h1 {color: red;}
 </style>
+2
